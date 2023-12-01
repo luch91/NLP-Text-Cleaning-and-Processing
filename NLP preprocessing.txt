@@ -1,0 +1,112 @@
+The Complete Beginner's Guide to Data Cleaning and Preprocessing in Natural Language Processing(NLP)
+
+
+
+Data cleaning and preprocessing are crucial steps in Natural Language Processing (NLP) to ensure that the data is in a suitable format for analysis and modeling.  The process is different from machine learning like linear regression that involves numerical datasets.  Here's a complete guide on data cleaning and preprocessing in NLP using Spacy library.
+
+
+
+Stage1: Taking stock:
+
+
+
+✒ Word Count: the total number of words in the dataset.
+
+
+
+✒Characters Count: the total number of characters in the dataset.
+
+
+
+✒Average Word Length: the character count divided by the word count.
+
+
+
+✒Stop Words Count: the total number of stop words in the dataset. stop words are frequently occurring, such as 'this', 'and', 'or', 'with', etc.
+
+
+
+✒Hashtags(#) and Mentions(@) Count: the total number of hashtags and mentions in the dataset.
+
+
+
+✒Numeric Digit Count: the total number of digits in the dataset. E.g. '123', phone numbers, 
+
+
+
+✒Upper Case Words Count: the total number of words in upper case. e.g., 'YOU', 'HELLO', 'BYE', etc.
+
+
+
+**Stage 2: Cleaning and Preprocessing
+
+
+
+✅ Lowercase Conversion: convert all the alphabets in the dataset to lowercase to ensure text consistency.
+
+
+
+✅Contraction to Expansion: Expand/convert the short forms of words to their original words. e.g. "I'm" is converted to "i am", "don't" "do not", "y'all" to "you all".
+
+
+
+✅Handling Missing Data: address missing values in the dataset by removing or inputting them.
+
+
+
+✅Count and Remove Emails: remove email addresses from the dataset.
+
+
+
+✅Count and Remove urls: remove all urls from the dataset.
+
+
+
+✅Remove retweets(RT) from Tweeter Data: This will remove 'rt' from the sentences.
+
+
+
+✅Special Chars and Punctuation Removal: deletes special characters like '\', '|', '~', '^', etc. from your dataset.
+
+
+
+✅Convert Words into their Base Form(Lemmatization): lemmatization is the conversion of words to their root form. You can do this using spacy or TextBlob. Take a sample series from the dataframe, lemmatize with TextBlob and Spacy. Choose which package to use for your preprocessing according to the result, and your project needs.
+
+
+
+✅Remove Multiple Spaces: deletes spaces that are redundant. e.g., 'I am  very     happy'.
+
+
+
+✅Remove HTML tags: example html tags '<html><h1>introduction to spaces </h1></html>. Tags do not have any significance to analysis.
+
+
+
+✅Remove Accented Chars: converts accented characters like "áccénted ímprÓper Úndérstándíng Ñoñe"  to ASCII characters('accented imprOper Understanding None').
+
+
+
+✅Remove Stop Words: this is a very tricky part of preprocessing. While deleting stop words results in fast and efficient analysis; removing a word like 'not' can change the meaning of a sentence and its sentiment.
+
+
+
+✅Remove Rare Words: these words most times do not have a meaning. When counted, most times they appear only once in the dataset. You can remove the top 20.
+
+
+
+✅Correct spellings using TextBlob: this works like autocorrect on your mobile phone. It corrects wrong spellings of English words in the dataset.
+
+
+
+✅Removing Duplicates: this is to ensure each data point is unique.
+
+
+
+
+
+✅Word Cloud Visualization: the output is an image visualization of the words in the dataset according to how frequently they occur; the bigger the size of the word, the more frequently it occurs.
+
+
+
+✅Word Tokenization: You can do this using spacy or TextBlob. Take a sample series from the dataset, lemmatize with TextBlob and Spacy. Choose which package to use for your preprocessing according to the result, and your project needs.
+
